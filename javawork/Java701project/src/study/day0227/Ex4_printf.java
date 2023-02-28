@@ -39,7 +39,7 @@ public class Ex4_printf {
 		System.out.println("\nprintf 로 출력");
 		System.out.printf("이름: %s\n", name);
 		System.out.printf("혈액형: %c형\n", blood);
-		System.out.printf("키: %5.1fcm\n", height); // % 5.1f: 전체자리수: 5, 소숫점 이하: 1
+		System.out.printf("키: %5.1fcm\n", height); // %5.1f: 전체자리수: 5, 소숫점 이하: 1
 		System.out.printf("자바: %d, 스프링: %d\n", java, spring);
 		System.out.printf("총점: %d", java + spring);
 		
