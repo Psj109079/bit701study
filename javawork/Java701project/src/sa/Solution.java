@@ -1,27 +1,19 @@
 package sa;
 
 class Solution {
-    public static int solution(String[] babbling) {
-        int answer = 0;
-        String[] arr = {"aya", "ye", "woo", "ma"};
+    public static int solution(int chicken) {
+        int answer = chicken / 10;
+        int coupon = chicken % 10;
         
-        for(int i = 0; i < babbling.length; i++) {
-        	for(int j = 0; j < arr.length; j++) {
-        		babbling[i] =babbling[i].replaceFirst(arr[j], ".");
-        	}
-        }
-        
-        for(int i = 0; i < babbling.length; i++) {
-        	babbling[i] =babbling[i].replaceAll(".", "");
-        	if(babbling[i].length() == 0) {
+        for(int i = 1; i <= chicken / 10; i++) {
+        	if(i % 10 == 0) {
         		answer++;
+        		coupon++;
         	}
         }
-        return answer;
+        return coupon;
     }
     public static void main(String[] args) {
-    	String[] arr = {"aya", "yee", "u", "maa", "wyeoo"};
-    	
-    	System.out.println(solution(arr));
+		System.out.println(solution(1081));
 	}
 }

@@ -1,4 +1,4 @@
-package day0228;
+package study.day0228;
 
 public class Ex2MainArgs {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package day0228;
+package study.day0228;
 
 import java.util.Date;
 

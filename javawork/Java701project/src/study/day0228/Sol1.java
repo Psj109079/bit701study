@@ -1,4 +1,4 @@
-package day0228;
+package study.day0228;
 
 import java.util.Scanner;
 
@@ -19,8 +19,8 @@ public class Sol1 {
 			if(n == 0) {break;}
 			sum += n;
 			cnt++;
-			System.out.printf("숫자의 갯수: %d, 합계: %d", cnt, sum);
 		}
+		System.out.printf("숫자의 갯수: %d, 합계: %d", cnt, sum);
 		sc.close();
 	}
 
