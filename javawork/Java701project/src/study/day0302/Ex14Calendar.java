@@ -24,7 +24,6 @@ public class Ex14Calendar {
 		// 입력한 년도, 월의 1일이 무슨 요일인지 week값 필요
 		Date date = new Date(year - 1900, month - 1, 1);
 		week = date.getDay();
-		
 		// 입력한 년도의 월이 몇일까지 있는지 구하기
 		switch(month) {
 		case 2:
