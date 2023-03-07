@@ -1,34 +1,21 @@
 package sa;
 
+import java.util.HashMap;
+
 class Solution {
-    public static int solution(int[][] lines) {
-    	int[] arr = new int[200];
+    public int solution(int[] nums) {
         int answer = 0;
-        int min = 200;
-        int max = 0;
-        
-        for(int i = 0; i < lines.length; i++) {
-        	for(int j = lines[i][0] + 100; j < lines[i][1] + 100; j++) {
-        		arr[j]++;
-        		if(j > max) {
-        			max = j;
-        		}
-        		if(j < min) {
-        			min = j;
-        		}
-        	}
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int cnt = 0;
+        for(int i = 0; i < nums.length; i++) {
+        	map.put(nums[i], cnt++);
         }
         
-        for(int i = min; i <= max; i++) {
-        	if(arr[i] > 1) {
-        		answer++;
-        	}
+        if((nums.length / 2) <= map.size()) {
+        	answer = nums.length / 2; 
+        } else {
+        	answer = map.size();
         }
         return answer;
     }
-    public static void main(String[] args) {
-		int[][] a = {{0, 1}, {2, 5}, {3, 9}};
-		
-		System.out.println(solution(a));
-	}
 }
