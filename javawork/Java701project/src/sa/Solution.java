@@ -1,21 +1,23 @@
 package sa;
 
-import java.util.HashMap;
-
 class Solution {
-    public int solution(int[] nums) {
-        int answer = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int cnt = 0;
-        for(int i = 0; i < nums.length; i++) {
-        	map.put(nums[i], cnt++);
+    public String solution(String s) {
+        String answer = "";
+        String[] arr = s.split("");
+        
+        for(int i = 0, j = 0; i < arr.length; i++) {
+        	if(arr[i].equals(" ")) {
+        		answer += arr[i];
+        		j = 0;
+        	} else if(j == 0 || j % 2 == 0) {
+        		answer += arr[i].toUpperCase();
+        		j++;
+        	} else {
+        		answer += arr[i].toLowerCase();
+        		j++;
+        	}
         }
         
-        if((nums.length / 2) <= map.size()) {
-        	answer = nums.length / 2; 
-        } else {
-        	answer = map.size();
-        }
         return answer;
     }
 }
